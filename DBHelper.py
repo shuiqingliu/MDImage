@@ -15,6 +15,7 @@ TABLES['bot'] = (
     " `ak` VARCHAR(40) NOT NULL ,"
     " `sk` VARCHAR(40) NOT NULL ,"
     " `host` VARCHAR(40) NOT NUll ,"
+    " `bucket` VARCHAR (20) NOT NULL"
     " PRIMARY  KEY (`username`)"
     ") ENGINE=InnoDB"
 )
@@ -35,11 +36,11 @@ def createTable(cursor):
         return False
 
 #inset in to 
-def insertData(username,ak,sk,host):
+def insertData(username,ak,sk,host,bucket):
     add_user = """INSERT INTO bot.user
-                (username,ak,sk,host)
-                VALUES (%s, %s, %s, %s)"""
-    user_data = (username,ak,sk,host)
+                (username,ak,sk,host,bucket)
+                VALUES (%s, %s, %s, %s,%s)"""
+    user_data = (username,ak,sk,host,bucket)
     try:
         cursor.execute(add_user,user_data)
         db.commit()
@@ -50,7 +51,7 @@ def insertData(username,ak,sk,host):
 
 #查询
 def getData(username):
-    query = ("select username,ak,sk,host from bot.user"
+    query = ("select username,ak,sk,host,bucket from bot.user"
              " WHERE username=%s")
     cursor.execute(query,[username])
     if cursor == None:
@@ -58,10 +59,10 @@ def getData(username):
     else:
         return cursor.fetchall()
 
-def update(username,ak,sk,host):
-    update = ("update user set ak= %s, sk= %s,host=%s where username= %s")
+def update(username,ak,sk,host,bucket):
+    update = ("update user set ak= %s, sk= %s,host=%s,bucket=%s where username= %s")
     try:
-        cursor.execute(update,[ak,sk,host,username])
+        cursor.execute(update,[ak,sk,host,username,bucket])
         db.commit()
         return True
     except mysql.connector.Error as err:
