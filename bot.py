@@ -28,13 +28,18 @@ def token(bot,updater,args,chat_data):
     user = updater.message.from_user
     #check whether user exist in db,if not then insert else update data
     if DBHelper.getData(user.username) == False:
-        DBHelper.insertData(user.username,args[0],args[1])
+        insetResult = DBHelper.insertData(user.username,args[0],args[1],args[2])
+        if insetResult:
+            updater.message.reply_text('Your account binding success!')
+        else:
+            updater.message.reply_text('Account binding error,try again later.')
     else:
-
-    print('user:' + user.username)
+        updateResult = DBHelper.update(user.username,args[0],args[1],args[2])
+        if updateResult:
+            updater.message.reply_text('Your info has been updated.')
+        else:
+            updater.message.reply_text('Sorry,I can\'t update your info,Please check your input')
     logger.info("用户输入的 token 的 ak 为: %s\n sk 为：%s",args[0],args[1])
-
-
 
 def photo(bot, updater):
     user = updater.message.from_user

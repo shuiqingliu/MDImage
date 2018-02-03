@@ -63,8 +63,10 @@ def update(username,ak,sk,host):
     try:
         cursor.execute(update,[ak,sk,host,username])
         db.commit()
+        return True
     except mysql.connector.Error as err:
         print('Failed to update user info')
+        return False
 
 def delete(username):
     deleteUsr = """delete from user where username=%s"""
