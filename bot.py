@@ -63,8 +63,10 @@ def photo(bot, updater):
             sk = userDetails[1]
             host = userDetails[2]
             bucket = userDetails[3]
+            #upload image to qiniu bucket
             photoUploadResult = OperationStore.sendImageFromLocal(ak,sk,bucket,file_name)
             if photoUploadResult:
+                #reply to user MarkDownLink
                 updater.message.reply_text(createMD(file_name,host))
             else:
                 updater.message.reply_text('Upload to qiniu bucket failed.Try again later.')
