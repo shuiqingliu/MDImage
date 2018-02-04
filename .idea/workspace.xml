@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ae38c7d2-4d82-42c2-9bf8-365fdb59e36c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DBHelper.py" afterPath="$PROJECT_DIR$/DBHelper.py" />
+      <change beforePath="$PROJECT_DIR$/OperationStore.py" afterPath="$PROJECT_DIR$/OperationStore.py" />
       <change beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
-      <change beforePath="$PROJECT_DIR$/operationStore.py" afterPath="$PROJECT_DIR$/OperationStore.py" />
-      <change beforePath="$PROJECT_DIR$/qiniuBucket.py" afterPath="$PROJECT_DIR$/BucketTool.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MDImage$operationStore.coverage" NAME="operationStore Coverage Results" MODIFIED="1517651651042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MDImage$bot.coverage" NAME="bot Coverage Results" MODIFIED="1517654608807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MDImage$bot.coverage" NAME="bot Coverage Results" MODIFIED="1517725331344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MDImage$DBHelper.coverage" NAME="DBHelper Coverage Results" MODIFIED="1517577088044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -33,70 +33,121 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/message.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/chat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-69">
+              <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectionmixins.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/twisted/internet/test/connectionmixins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9407">
+              <caret line="427" column="11" lean-forward="false" selection-start-line="427" selection-start-column="4" selection-end-line="427" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="callbackquery.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/callbackquery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1909">
+              <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="851">
+              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updater.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/ext/updater.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9614">
+              <caret line="432" column="64" lean-forward="false" selection-start-line="432" selection-start-column="57" selection-end-line="432" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messagehandler.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/ext/messagehandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/bot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4232">
+              <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBHelper.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBHelper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+              <folding>
+                <element signature="e#25#60#0" expanded="true" />
+                <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+                <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+                <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+                <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+                <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+                <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+                <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+                <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+                <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
+                <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+                <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+                <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
+                <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
+                <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
+                <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="55" />
               <folding>
                 <element signature="e#25#47#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OperationStore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OperationStore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBHelper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBHelper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
-              <folding>
-                <element signature="e#25#60#0" expanded="true" />
-                <marker date="1517628972000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-                <marker date="1517628972000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-                <marker date="1517628972000" expanded="true" signature="258:460" ph="CREATE TABLE... user" />
-                <marker date="1517628972000" expanded="true" signature="258:462" ph="CREATE TABLE... user" />
-                <marker date="1517628972000" expanded="true" signature="258:482" ph="CREATE TABLE... user" />
-                <marker date="1517628972000" expanded="true" signature="991:1011" ph="INSERT INTO user... " />
-                <marker date="1517628972000" expanded="true" signature="991:1028" ph="INSERT INTO user... " />
-                <marker date="1517628972000" expanded="true" signature="991:1089" ph="INSERT INTO user... " />
-                <marker date="1517628972000" expanded="true" signature="1381:1421" ph="select usern... user" />
-                <marker date="1517628972000" expanded="true" signature="1381:1444" ph="select usern... bot" />
-                <marker date="1517628972000" expanded="true" signature="1381:1452" ph="select usern... userwhere" />
-                <marker date="1517628972000" expanded="true" signature="1381:1455" ph="select usern... user" />
-                <marker date="1517628972000" expanded="true" signature="1631:1688" ph="update user... " />
-                <marker date="1517628972000" expanded="true" signature="1941:1975" ph="delete from user... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BucketTool.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BucketTool.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,6 +167,8 @@
       <find>外链</find>
       <find>Domain</find>
       <find>default_rs_host</find>
+      <find>message</find>
+      <find>reply_to_message</find>
     </findStrings>
     <dirStrings>
       <dir>/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/qiniu</dir>
@@ -133,8 +186,8 @@
         <option value="/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/mysql/connector/__init__.py" />
         <option value="$PROJECT_DIR$/operationStore.py" />
         <option value="$PROJECT_DIR$/OperationStore.py" />
-        <option value="$PROJECT_DIR$/DBHelper.py" />
         <option value="$PROJECT_DIR$/bot.py" />
+        <option value="$PROJECT_DIR$/DBHelper.py" />
       </list>
     </option>
   </component>
@@ -144,7 +197,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="33" />
     <option name="y" value="32" />
     <option name="width" value="2494" />
@@ -185,6 +238,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -201,7 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,22 +362,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="972" extended-state="6" />
+    <frame x="33" y="32" width="2494" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30151337" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37514254" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14274259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -363,80 +416,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6808">
-          <caret line="302" column="30" lean-forward="false" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="64" column="15" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/ext/handler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/ext/commandhandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1932">
-          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#25#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
-          <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6946">
-          <caret line="302" column="30" lean-forward="false" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/ext/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6624">
-          <caret line="302" column="26" lean-forward="false" selection-start-line="302" selection-start-column="26" selection-end-line="302" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/telegram/ext/handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -451,7 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1932">
           <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -475,20 +463,21 @@
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="e#25#60#0" expanded="true" />
-            <marker date="1517628972000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:460" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:462" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:482" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="991:1011" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="991:1028" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="991:1089" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="1381:1421" ph="select usern... user" />
-            <marker date="1517628972000" expanded="true" signature="1381:1444" ph="select usern... bot" />
-            <marker date="1517628972000" expanded="true" signature="1381:1452" ph="select usern... userwhere" />
-            <marker date="1517628972000" expanded="true" signature="1381:1455" ph="select usern... user" />
-            <marker date="1517628972000" expanded="true" signature="1631:1688" ph="update user... " />
-            <marker date="1517628972000" expanded="true" signature="1941:1975" ph="delete from user... " />
+            <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
+            <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+            <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+            <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
+            <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
+            <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
+            <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
           </folding>
         </state>
       </provider>
@@ -637,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1932">
           <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1426">
           <caret line="64" column="15" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,15 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6808">
           <caret line="302" column="30" lean-forward="false" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2690">
-          <caret line="428" column="43" lean-forward="true" selection-start-line="428" selection-start-column="43" selection-end-line="428" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -692,48 +669,122 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
-          <folding>
-            <element signature="e#25#60#0" expanded="true" />
-            <marker date="1517628972000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:460" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:462" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="258:482" ph="CREATE TABLE... user" />
-            <marker date="1517628972000" expanded="true" signature="991:1011" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="991:1028" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="991:1089" ph="INSERT INTO user... " />
-            <marker date="1517628972000" expanded="true" signature="1381:1421" ph="select usern... user" />
-            <marker date="1517628972000" expanded="true" signature="1381:1444" ph="select usern... bot" />
-            <marker date="1517628972000" expanded="true" signature="1381:1452" ph="select usern... userwhere" />
-            <marker date="1517628972000" expanded="true" signature="1381:1455" ph="select usern... user" />
-            <marker date="1517628972000" expanded="true" signature="1631:1688" ph="update user... " />
-            <marker date="1517628972000" expanded="true" signature="1941:1975" ph="delete from user... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OperationStore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="322">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="e#25#101#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/ext/callbackqueryhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4232">
+          <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/callbackquery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1909">
+          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/twisted/internet/test/connectionmixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9407">
+          <caret line="427" column="11" lean-forward="false" selection-start-line="427" selection-start-column="4" selection-end-line="427" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/ext/updater.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9614">
+          <caret line="432" column="64" lean-forward="false" selection-start-line="432" selection-start-column="57" selection-end-line="432" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/ext/messagehandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/telegram/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="55" />
           <folding>
             <element signature="e#25#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+          <folding>
+            <element signature="e#25#60#0" expanded="true" />
+            <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+            <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+            <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
+            <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+            <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+            <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
+            <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
+            <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
+            <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
           </folding>
         </state>
       </provider>
