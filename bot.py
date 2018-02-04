@@ -12,8 +12,8 @@ import config,logging,DBHelper,OperationStore
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-#auth my bot
-
+#store user,ak,sk,host
+bucketTemp = ''
 #bot start
 def start(bot,updater):
     updater.message.reply_text(
@@ -22,31 +22,51 @@ def start(bot,updater):
         'example: /token <xxxxx> <yyyyy> \n'
         'x is you ak,y is you sk',)
 
-def token(bot,updater,args,chat_data):
+def token(bot, updater, args, chat_data):
     user = updater.message.from_user
+    logger.info("DBHelper get username result: %s",DBHelper.getData(user.username))
     #check whether user exist in db,if not then insert else update data
     if DBHelper.getData(user.username) == False:
-        insetResult = DBHelper.insertData(user.username,args[0],args[1],args[2])
-        if insetResult:
-            updater.message.reply_text('Your account binding success!')
-        else:
+        insetResult = DBHelper.insertData(user.username, args[0], args[1], args[2], ' ')
+        if insetResult  == False:
             updater.message.reply_text('Account binding error,try again later.')
     else:
-        updateResult = DBHelper.update(user.username,args[0],args[1],args[2])
-        if updateResult:
-            updater.message.reply_text('Your info has been updated.')
-        else:
+        updateResult = DBHelper.update(user.username, args[0], args[1], args[2], ' ')
+        if updateResult == False:
             updater.message.reply_text('Sorry,I can\'t update your info,Please check your input')
+    #show inline keyboard let use select bucket that they want to use.
     reply_markup = chooseBucket(args[0],args[1])
     updater.message.reply_text('Please choose your bucket:',reply_markup=reply_markup)
+    def storeData(bucket):
+        pass
+
+# def
 
 def photo(bot, updater):
     user = updater.message.from_user
-    photo_file = bot.get_file(updater.message.photo[-1].file_id)
-    photo_file.download('user_photo.jpg')
-    logger.info("Photo of %s: %s", user.first_name, 'user_photo.jpg')
+    storedUser = DBHelper.getData(user.username)
+    #check whether user has been binded,if yes then send image to qiniu else reminder.
+    if storedUser == False:
+        updater.message.reply_text('You show binding your qiniu account before you send image to store\n'
+                                   'like /token ak,sk,host')
+    else:
+        photo_file = bot.get_file(updater.message.photo[-1].file_id)
+        photo_file.download('user_photo.jpg')
+        logger.info("Photo of %s: %s", user.first_name, 'user_photo.jpg')
     updater.message.reply_text('Gorgeous! Now, send me your location please, '
                               'or send /skip if you don\'t want to.')
+
+def button(bot, update):
+    query = update.callback_query
+    bucket = query.data
+    username = query.message.chat.username
+    logger.info("bucket is %s,username is %s",bucket,username)
+    # insert user info to db
+    updateBucketResult = DBHelper.updateBucket(username,bucket)
+    if updateBucketResult:
+        bot.send_message(chat_id=query.message.chat_id,text='Your account binding success!')
+    else:
+        bot.send_message(chat_id=query.message.chat_id, text='Account binding error,try again later.')
 
 def chooseBucket(ak,sk):
     bukcets = OperationStore.getBucketList(ak,sk)
@@ -76,8 +96,9 @@ def main():
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler('start',start))
-    dispatcher.add_handler(MessageHandler(Filters.photo, photo))
     dispatcher.add_handler(CommandHandler('token',token,pass_args=True,pass_chat_data=True))
+    dispatcher.add_handler(CallbackQueryHandler(button))
+    dispatcher.add_handler(MessageHandler(Filters.photo, photo))
    # dispatcher.add_handler(CommandHandler('choose',chooseBucket))
     dispatcher.add_handler(CommandHandler('cancel',cancel))
 
