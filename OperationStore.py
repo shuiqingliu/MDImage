@@ -11,17 +11,32 @@ def getBucketList(ak,sk):
     return bucketTool.getBucketList()
 
 #store image
-def sendImage(username,image):
-    pass
-    # 生成上传 Token
+def sendImage(ak,sk,bucket,filename,url):
+    auth = Auth(ak, sk)
+    bucketManager = BucketManager(auth)
+    print(url + ':' + bucket +  ':' + filename)
+    ret, info = bucketManager.fetch(url, bucket, filename)
+    print(info)
+    if ret['key'] == filename:
+        return  True
+    else:
+        return False
 
-    # token = q.upload_token(bucket_name, key, 3600)
-    # # 要上传文件的本地路径
-    # localfile = './sync/bbb.jpg'
-    # ret, info = put_file(token, key, localfile)
+def sendImageFromLocal(ak,sk,bucket,filename):
+    auth = Auth(ak, sk)
+    # 生成上传 Token，可以指定过期时间等
+    token = auth.upload_token(bucket, filename, 3600)
+    # 要上传文件的本地路径
+    localfile = './image/{}'.format(filename)
+    ret, info = put_file(token, filename, localfile)
+    print(info)
+    if ret['key'] == filename:
+        return True
+    else:
+        return False
 
 def main():
-    list = getBucketList('34lHs_MrDWgH8ldjkpjHRfzXn589tr57PUf6NLpO','-GPhLVzIMcyrZVuD3zrSDKAtv6AAI_5l4dZsKwg9')
+    list = getBucketList('34lHs_MrDWgH8ldjkpjHRfzXn589tr57PUf6NLpO','-GPhLVzIMcyrZVuD3zrSDKAtv6AAI_5l4dZsKwg9') #Fake token
     print(len(list))
     for i in list:
         print(i)
