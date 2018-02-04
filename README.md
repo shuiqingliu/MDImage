@@ -8,7 +8,7 @@
 
 Search bot name in telegram,the username is `@MDImageBot`,then click start button
 
-## Binding your account infomation
+## Binding your account information
 
 - get qiniu account_key and screate_key
 - get qiniu outerlink host

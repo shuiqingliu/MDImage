@@ -1,4 +1,4 @@
 # -*- coding: UTF-8 -*-
 
 #bot config
-BOT_TOKEN = '539636749:AAHCH0eOtoe9XsYGl2_MLZRhm3tGlpZ4ZUs'
+BOT_TOKEN = '539636749:AAEWCtd0doB3aMEh6F7lmjG2NQd-eZnFDZ8'
