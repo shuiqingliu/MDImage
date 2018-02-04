@@ -30,6 +30,7 @@ def createTable(cursor):
                 print('user table exists')
                 return True
         cursor.execute(TABLES['bot'])
+        cursor.close()
         return True
     except mysql.connector.Error as err:
         print('Failed creating table :{}'.format(err))
@@ -44,6 +45,7 @@ def insertData(username,ak,sk,host,bucket):
     try:
         cursor.execute(add_user,user_data)
         db.commit()
+        cursor.close()
         return True
     except mysql.connector.Error as err:
         print('Failed to insert data:{}'.format(err))
@@ -51,14 +53,17 @@ def insertData(username,ak,sk,host,bucket):
 
 #查询
 def getData(username):
+    cursorTemp = db.cursor()
     query = ("select username,ak,sk,host,bucket from bot.user"
              " WHERE username=%s")
-    cursor.execute(query,[username])
-    if cursor == None:
+    cursorTemp.execute(query,[username])
+    resultLen = len(cursorTemp.fetchall())
+    if resultLen == 0:
         return False
     else:
-        return cursor.fetchall()
+        return cursorTemp.fetchall()
 
+#update all info
 def update(username,ak,sk,host,bucket):
     update = ("update user set ak= %s, sk= %s,host=%s,bucket=%s where username= %s")
     try:
@@ -66,6 +71,18 @@ def update(username,ak,sk,host,bucket):
         db.commit()
         return True
     except mysql.connector.Error as err:
+        print('Failed to update user info')
+        return False
+
+#update bucket
+def updateBucket(username,bucket):
+    update = ("update user set bucket=%s where username= %s")
+    try:
+        cursor.execute(update,[bucket,username])
+        db.commit()
+        return True
+    except mysql.connector.Error as err:
+        print(err)
         print('Failed to update user info')
         return False
 
