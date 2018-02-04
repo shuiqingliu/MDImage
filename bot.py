@@ -1,19 +1,14 @@
 # -*- coding: UTF-8 -*-
 
-from uuid import uuid4
-from telegram.utils.helpers import escape_markdown
-from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardButton,InlineKeyboardMarkup)
-from telegram import InlineQueryResultArticle, ParseMode,InputTextMessageContent
+from telegram import (InlineKeyboardButton,InlineKeyboardMarkup)
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler, ConversationHandler,\
      InlineQueryHandler,CallbackQueryHandler
-import config,logging,DBHelper,OperationStore
+import config,logging,DBHelper,OperationStore,requests,os
 
 #set logging format
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-#store user,ak,sk,host
-bucketTemp = ''
 #bot start
 def start(bot,updater):
     updater.message.reply_text(
@@ -22,6 +17,7 @@ def start(bot,updater):
         'example: /token <xxxxx> <yyyyy> \n'
         'x is you ak,y is you sk',)
 
+#start binding user info
 def token(bot, updater, args, chat_data):
     user = updater.message.from_user
     logger.info("DBHelper get username result: %s",DBHelper.getData(user.username))
@@ -31,7 +27,9 @@ def token(bot, updater, args, chat_data):
         if insetResult  == False:
             updater.message.reply_text('Account binding error,try again later.')
     else:
+        logger.info('Start update userinfo!')
         updateResult = DBHelper.update(user.username, args[0], args[1], args[2], ' ')
+        logger.info(updateResult)
         if updateResult == False:
             updater.message.reply_text('Sorry,I can\'t update your info,Please check your input')
     #show inline keyboard let use select bucket that they want to use.
@@ -39,8 +37,6 @@ def token(bot, updater, args, chat_data):
     updater.message.reply_text('Please choose your bucket:',reply_markup=reply_markup)
     def storeData(bucket):
         pass
-
-# def
 
 def photo(bot, updater):
     user = updater.message.from_user
@@ -50,12 +46,38 @@ def photo(bot, updater):
         updater.message.reply_text('You show binding your qiniu account before you send image to store\n'
                                    'like /token ak,sk,host')
     else:
+        photo_id = updater.message.photo[-1].file_id
         photo_file = bot.get_file(updater.message.photo[-1].file_id)
-        photo_file.download('user_photo.jpg')
-        logger.info("Photo of %s: %s", user.first_name, 'user_photo.jpg')
-    updater.message.reply_text('Gorgeous! Now, send me your location please, '
-                              'or send /skip if you don\'t want to.')
+        json_url = ('https://api.telegram.org/bot' + config.BOT_TOKEN +
+                    '/getFile?file_id=' + photo_id)
+        file_path = (requests.get(json_url).json())['result']['file_path']
+        file_name = file_path.split('/')[1]
+        print(file_name)
+        photo_url = 'https://api.telegram.org/file/bot' + config.BOT_TOKEN + "/" + file_path
+        photo_file.download('./image/{}'.format(file_name))
+        #get user details
+        userDetails = DBHelper.getDetails(user.username)
+        logger.info(photo_url)
+        if userDetails:
+            ak = userDetails[0]
+            sk = userDetails[1]
+            host = userDetails[2]
+            bucket = userDetails[3]
+            photoUploadResult = OperationStore.sendImageFromLocal(ak,sk,bucket,file_name)
+            if photoUploadResult:
+                updater.message.reply_text(createMD(file_name,host))
+            else:
+                updater.message.reply_text('Upload to qiniu bucket failed.Try again later.')
+        else:
+            updater.message.reply_text('Can\'t found your information in database.')
 
+        #delet Download File
+        try:
+            os.remove('./image/{}'.format(file_name))
+        except:
+            logger.info('Delete File {} error'.format(file_name))
+
+#inlineKeyboardButton callback deal,to get user select data and other info
 def button(bot, update):
     query = update.callback_query
     bucket = query.data
@@ -68,6 +90,7 @@ def button(bot, update):
     else:
         bot.send_message(chat_id=query.message.chat_id, text='Account binding error,try again later.')
 
+#create keyboar button from bucket list
 def chooseBucket(ak,sk):
     bukcets = OperationStore.getBucketList(ak,sk)
     logger.info("buckets is %s",bukcets)
@@ -79,11 +102,10 @@ def chooseBucket(ak,sk):
     reply_markup = InlineKeyboardMarkup(keyboard)
     return reply_markup
 
+#get db stored info about current user
 def getInfo(bot,updater):
     username = updater.message.from_user.username
     result = DBHelper.getData(username)
-    print('=======')
-    print(result)
     if result != False:
         ak   = result[0][1]
         sk   = result[0][2]
@@ -93,6 +115,11 @@ def getInfo(bot,updater):
     else:
         updater.message.reply_text('Sorry,Can\'t found your information!')
 
+#create MarkDown image URL
+def createMD(filename,host):
+    url = 'http://{}/{}'.format(host,filename)
+    MDLink = '![{}]({})'.format(filename,url)
+    return MDLink
 def cancel(bot, updater):
     user = updater.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
