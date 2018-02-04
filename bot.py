@@ -79,6 +79,19 @@ def chooseBucket(ak,sk):
     reply_markup = InlineKeyboardMarkup(keyboard)
     return reply_markup
 
+def getInfo(bot,updater):
+    username = updater.message.from_user.username
+    result = DBHelper.getData(username)
+    print('=======')
+    print(result)
+    if result != False:
+        ak   = result[0][1]
+        sk   = result[0][2]
+        host = result[0][3]
+        bucket  = result[0][4]
+        updater.message.reply_text('Your info as follows:\n\nak:{}\n sk:{}\n host:{}\n bucket:{}\n use /token command to change it'.format(ak,sk,host,bucket))
+    else:
+        updater.message.reply_text('Sorry,Can\'t found your information!')
 
 def cancel(bot, updater):
     user = updater.message.from_user
@@ -99,7 +112,7 @@ def main():
     dispatcher.add_handler(CommandHandler('token',token,pass_args=True,pass_chat_data=True))
     dispatcher.add_handler(CallbackQueryHandler(button))
     dispatcher.add_handler(MessageHandler(Filters.photo, photo))
-   # dispatcher.add_handler(CommandHandler('choose',chooseBucket))
+    dispatcher.add_handler(CommandHandler('getInfo',getInfo))
     dispatcher.add_handler(CommandHandler('cancel',cancel))
 
     dispatcher.add_error_handler(error)
