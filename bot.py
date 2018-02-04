@@ -13,9 +13,9 @@ logger = logging.getLogger(__name__)
 def start(bot,updater):
     updater.message.reply_text(
         'Hi! I\'m MDImage Bot. I will help you to upload image to qiniu.\n '
-        'Send your qiniu ak and sk to me.\n\n'
-        'example: /token <xxxxx> <yyyyy> \n'
-        'x is you ak,y is you sk',)
+        'Send your qiniu ak,sk,host to me.\n\n'
+        'example: /token <ak> <sk> <host>\n'
+        'eg: /token 1sdfs 2sdfsd qinliu.qiniudn.com')
 
 #start binding user info
 def token(bot, updater, args, chat_data):
