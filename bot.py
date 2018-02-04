@@ -89,7 +89,7 @@ def getInfo(bot,updater):
         sk   = result[0][2]
         host = result[0][3]
         bucket  = result[0][4]
-        updater.message.reply_text('Your info as follows:\n\nak:{}\n sk:{}\n host:{}\n bucket:{}\n use /token command to change it'.format(ak,sk,host,bucket))
+        updater.message.reply_text('Your info as follows:\n\n ak:{}\n sk:{}\n host:{}\n bucket:{}\n\n Use /token command to change it'.format(ak,sk,host,bucket))
     else:
         updater.message.reply_text('Sorry,Can\'t found your information!')
 
