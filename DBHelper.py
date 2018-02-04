@@ -2,6 +2,11 @@
 
 from  mysql.connector import errors
 import mysql.connector
+import logging
+
+#set logger
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 db = mysql.connector.connect(user='root',password='qingliu.',database='bot',buffered=True)
@@ -51,7 +56,7 @@ def insertData(username,ak,sk,host,bucket):
         print('Failed to insert data:{}'.format(err))
         return False
 
-#查询
+#query
 def getData(username):
     cursorTemp = db.cursor()
     query = ("select username,ak,sk,host,bucket from bot.user"
@@ -65,9 +70,10 @@ def getData(username):
 
 #update all info
 def update(username,ak,sk,host,bucket):
-    update = ("update user set ak= %s, sk= %s,host=%s,bucket=%s where username= %s")
+    updateUserInfo = ("update user set ak= %s, sk= %s,host=%s,bucket=%s where username= %s")
+    print("DBHelper Upadate: %s",username +':'+ ak +':' +sk + ':' + host)
     try:
-        cursor.execute(update,[ak,sk,host,username,bucket])
+        cursor.execute(updateUserInfo,[ak,sk,host,bucket,username])
         db.commit()
         return True
     except mysql.connector.Error as err:
@@ -84,6 +90,20 @@ def updateBucket(username,bucket):
     except mysql.connector.Error as err:
         print(err)
         print('Failed to update user info')
+        return False
+
+#return specific user info
+def getDetails(username):
+    result = getData(username)
+    if result != False:
+        ak = result[0][1]
+        sk = result[0][2]
+        host = result[0][3]
+        bucket = result[0][4]
+        resultList = []
+        resultList.extend([ak, sk, host, bucket])
+        return resultList
+    else:
         return False
 
 def delete(username):
