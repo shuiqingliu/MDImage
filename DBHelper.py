@@ -57,11 +57,11 @@ def getData(username):
     query = ("select username,ak,sk,host,bucket from bot.user"
              " WHERE username=%s")
     cursorTemp.execute(query,[username])
-    resultLen = len(cursorTemp.fetchall())
-    if resultLen == 0:
+    result = cursorTemp.fetchall()
+    if len(result) == 0:
         return False
     else:
-        return cursorTemp.fetchall()
+        return result
 
 #update all info
 def update(username,ak,sk,host,bucket):
@@ -95,11 +95,8 @@ def main():
     #createTable(cursor)
     #delete('qingliu')
     #insertData('test','23rfff','345dsfff')
-    result = getData('test')
-    if result == None:
-        print("未找到")
-    else:
-        print(result)
+    print(getData('qingliu'))
+
 
 if __name__ == '__main__':
     main()

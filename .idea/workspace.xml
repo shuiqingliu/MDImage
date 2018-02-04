@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae38c7d2-4d82-42c2-9bf8-365fdb59e36c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/DBHelper.py" afterPath="$PROJECT_DIR$/DBHelper.py" />
-      <change beforePath="$PROJECT_DIR$/OperationStore.py" afterPath="$PROJECT_DIR$/OperationStore.py" />
-      <change beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +14,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MDImage$operationStore.coverage" NAME="operationStore Coverage Results" MODIFIED="1517651651042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MDImage$bot.coverage" NAME="bot Coverage Results" MODIFIED="1517725331344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MDImage$DBHelper.coverage" NAME="DBHelper Coverage Results" MODIFIED="1517577088044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MDImage$DBHelper.coverage" NAME="DBHelper Coverage Results" MODIFIED="1517727045725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -116,25 +113,25 @@
       <file leaf-file-name="DBHelper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+            <state relative-caret-position="415">
+              <caret line="101" column="10" lean-forward="true" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
               <folding>
                 <element signature="e#25#60#0" expanded="true" />
-                <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-                <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-                <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
-                <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
-                <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
-                <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
-                <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
-                <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
-                <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
-                <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
-                <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
-                <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
-                <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
-                <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
-                <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
+                <marker date="1517727045000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+                <marker date="1517727045000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+                <marker date="1517727045000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+                <marker date="1517727045000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+                <marker date="1517727045000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+                <marker date="1517727045000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+                <marker date="1517727045000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+                <marker date="1517727045000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+                <marker date="1517727045000" expanded="true" signature="1518:1565" ph="select usern... user" />
+                <marker date="1517727045000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+                <marker date="1517727045000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+                <marker date="1517727045000" expanded="true" signature="1518:1599" ph="select usern... user" />
+                <marker date="1517727045000" expanded="true" signature="1829:1896" ph="update user... " />
+                <marker date="1517727045000" expanded="true" signature="2180:2224" ph="update user... " />
+                <marker date="1517727045000" expanded="true" signature="2492:2526" ph="delete from user... " />
               </folding>
             </state>
           </provider>
@@ -143,7 +140,7 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="1107">
               <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="55" />
               <folding>
                 <element signature="e#25#47#0" expanded="true" />
@@ -274,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bot">
+  <component name="RunManager" selected="Python.DBHelper">
     <configuration name="DBHelper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,9 +336,9 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.bot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.operationStore" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DBHelper" />
+        <item index="0" class="java.lang.String" itemvalue="Python.DBHelper" />
+        <item index="1" class="java.lang.String" itemvalue="Python.bot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.operationStore" />
       </list>
     </recent_temporary>
   </component>
@@ -376,7 +373,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993015" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -463,21 +460,21 @@
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="e#25#60#0" expanded="true" />
-            <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
-            <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
-            <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
-            <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
-            <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
-            <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
-            <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
+            <marker date="1517727045000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1518:1565" ph="select usern... user" />
+            <marker date="1517727045000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+            <marker date="1517727045000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+            <marker date="1517727045000" expanded="true" signature="1518:1599" ph="select usern... user" />
+            <marker date="1517727045000" expanded="true" signature="1829:1896" ph="update user... " />
+            <marker date="1517727045000" expanded="true" signature="2180:2224" ph="update user... " />
+            <marker date="1517727045000" expanded="true" signature="2492:2526" ph="delete from user... " />
           </folding>
         </state>
       </provider>
@@ -756,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="1107">
           <caret line="64" column="55" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="55" />
           <folding>
             <element signature="e#25#47#0" expanded="true" />
@@ -766,25 +763,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+        <state relative-caret-position="415">
+          <caret line="101" column="10" lean-forward="true" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
           <folding>
             <element signature="e#25#60#0" expanded="true" />
-            <marker date="1517725331000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
-            <marker date="1517725331000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
-            <marker date="1517725331000" expanded="true" signature="1518:1565" ph="select usern... user" />
-            <marker date="1517725331000" expanded="true" signature="1518:1588" ph="select usern... bot" />
-            <marker date="1517725331000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
-            <marker date="1517725331000" expanded="true" signature="1518:1599" ph="select usern... user" />
-            <marker date="1517725331000" expanded="true" signature="1850:1917" ph="update user... " />
-            <marker date="1517725331000" expanded="true" signature="2201:2245" ph="update user... " />
-            <marker date="1517725331000" expanded="true" signature="2513:2547" ph="delete from user... " />
+            <marker date="1517727045000" expanded="true" signature="258:320" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:355" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:498" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:500" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="258:520" ph="CREATE TABLE... user" />
+            <marker date="1517727045000" expanded="true" signature="1059:1079" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1059:1096" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1059:1167" ph="INSERT INTO user... " />
+            <marker date="1517727045000" expanded="true" signature="1518:1565" ph="select usern... user" />
+            <marker date="1517727045000" expanded="true" signature="1518:1588" ph="select usern... bot" />
+            <marker date="1517727045000" expanded="true" signature="1518:1596" ph="select usern... userwhere" />
+            <marker date="1517727045000" expanded="true" signature="1518:1599" ph="select usern... user" />
+            <marker date="1517727045000" expanded="true" signature="1829:1896" ph="update user... " />
+            <marker date="1517727045000" expanded="true" signature="2180:2224" ph="update user... " />
+            <marker date="1517727045000" expanded="true" signature="2492:2526" ph="delete from user... " />
           </folding>
         </state>
       </provider>
