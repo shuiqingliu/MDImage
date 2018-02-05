@@ -2,3 +2,4 @@ __pycache__
 venv
 *.pyc
 .qiniu_pythonsdk_hostscache.json
+config.py
