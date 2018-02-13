@@ -54,7 +54,7 @@ def photo(bot, updater):
         file_name = file_path.split('/')[1]
         print(file_name)
         photo_url = 'https://api.telegram.org/file/bot' + config.BOT_TOKEN + "/" + file_path
-        photo_file.download(os.getcwd() + 'image/{}'.format(file_name))
+        photo_file.download(os.getcwd() + '/image/{}'.format(file_name))
         #get user details
         userDetails = DBHelper.getDetails(user.username)
         logger.info(photo_url)
@@ -75,7 +75,7 @@ def photo(bot, updater):
 
         #delet Download File
         try:
-            os.remove('./image/{}'.format(file_name))
+            os.remove(os.getcwd() + '/image/{}'.format(file_name))
         except:
             logger.info('Delete File {} error'.format(file_name))
 
