@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 from telegram import (InlineKeyboardButton,InlineKeyboardMarkup)
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, RegexHandler, ConversationHandler,\
-     InlineQueryHandler,CallbackQueryHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler,\
+     CallbackQueryHandler
 import config,logging,DBHelper,OperationStore,requests,os
 
 #set logging format
@@ -141,7 +141,7 @@ def main():
     dispatcher.add_handler(CommandHandler('token',token,pass_args=True,pass_chat_data=True))
     dispatcher.add_handler(CallbackQueryHandler(button))
     dispatcher.add_handler(MessageHandler(Filters.photo, photo))
-    dispatcher.add_handler(CommandHandler('getInfo',getInfo))
+    dispatcher.add_handler(CommandHandler('getinfo',getInfo))
     dispatcher.add_handler(CommandHandler('cancel',cancel))
 
     dispatcher.add_error_handler(error)

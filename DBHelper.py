@@ -35,7 +35,6 @@ def createTable(cursor):
                 print('user table exists')
                 return True
         cursor.execute(TABLES['bot'])
-        cursor.close()
         return True
     except mysql.connector.Error as err:
         print('Failed creating table :{}'.format(err))
@@ -50,7 +49,6 @@ def insertData(username,ak,sk,host,bucket):
     try:
         cursor.execute(add_user,user_data)
         db.commit()
-        cursor.close()
         return True
     except mysql.connector.Error as err:
         print('Failed to insert data:{}'.format(err))
