@@ -54,7 +54,7 @@ def photo(bot, updater):
         file_name = file_path.split('/')[1]
         print(file_name)
         photo_url = 'https://api.telegram.org/file/bot' + config.BOT_TOKEN + "/" + file_path
-        photo_file.download('./image/{}'.format(file_name))
+        photo_file.download(os.getcwd() + '/image/{}'.format(file_name))
         #get user details
         userDetails = DBHelper.getDetails(user.username)
         logger.info(photo_url)

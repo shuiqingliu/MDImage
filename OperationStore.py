@@ -3,6 +3,7 @@
 from qiniu import Auth, put_file, etag, urlsafe_base64_decode, BucketManager
 from BucketTool import BucketTool
 import DBHelper
+import os
 
 #get buckets
 def getBucketList(ak,sk):
@@ -27,7 +28,7 @@ def sendImageFromLocal(ak,sk,bucket,filename):
     # 生成上传 Token，可以指定过期时间等
     token = auth.upload_token(bucket, filename, 3600)
     # 要上传文件的本地路径
-    localfile = './image/{}'.format(filename)
+    localfile = os.getcwd() + '/image/{}'.format(filename)
     ret, info = put_file(token, filename, localfile)
     print(info)
     if ret['key'] == filename:
